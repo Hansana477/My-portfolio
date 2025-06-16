@@ -1,6 +1,8 @@
 /* Projects Page Specific Styles */
 .projects-container {
-    padding-top: 80px;
+     padding-top: 80px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .projects-hero {
@@ -13,7 +15,7 @@
 }
 
 .projects-hero h1 {
-    font-size: 2.8rem;
+    font-size: 2.2rem;
     margin-bottom: 15px;
 }
 

@@ -1,0 +1,122 @@
+:root {
+    --primary: #6C63FF;
+    --secondary: #4D44DB;
+    --dark: #2F2E41;
+    --light: #F8F9FA;
+}
+
+/* Skills Container */
+.skills-container {
+     padding-top: 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.skills-hero {
+    background: linear-gradient(135deg, #2F2E41 0%, #4D44DB 100%);
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+    margin-bottom: 30px;
+    border-radius:15px ;
+}
+
+.skills-hero h1 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+.skills-hero h1 span {
+    color: #6C63FF;
+}
+
+.skills-hero p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* Skills Boxes - Adjusted Header Size Only */
+.skill-box {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    width: 90%; /* Reduced width */
+    max-width: 500px; /* Smaller max-width */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Smaller Category Headers */
+.box-header {
+    background: var(--primary);
+    color: white;
+    padding: 12px 15px; /* Reduced padding */
+    display: flex;
+    align-items: center;
+    min-height: 40px; /* Fixed height */
+}
+
+.box-header i {
+    font-size: 1.3rem; /* Smaller icon */
+    margin-right: 10px; /* Tighter spacing */
+}
+
+.box-header h2 {
+    font-size: 1.2rem; /* Smaller text */
+    margin: 0;
+}
+
+/* Original Skill Items Size (unchanged) */
+.box-content {
+    padding: 25px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 20px;
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    border-radius: 8px;
+    background: rgba(108, 99, 255, 0.05);
+    transition: all 0.3s ease;
+}
+
+.skill-item:hover {
+    background: rgba(108, 99, 255, 0.15);
+    transform: scale(1.05);
+}
+
+.skill-item i {
+    font-size: 2.2rem; /* Original size */
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.skill-item span {
+    font-weight: 500;
+    color: var(--dark);
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .skill-box {
+        width: 95%; /* Slightly wider on mobile */
+    }
+    
+    .box-content {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .box-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
