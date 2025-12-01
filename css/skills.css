@@ -7,9 +7,10 @@
 
 /* Skills Container */
 .skills-container {
-     padding-top: 80px;
+    padding-top: 80px;
     max-width: 1200px;
     margin: 0 auto;
+    padding-bottom: 50px;
 }
 
 .skills-hero {
@@ -17,8 +18,8 @@
     color: white;
     padding: 60px 0;
     text-align: center;
-    margin-bottom: 30px;
-    border-radius:15px ;
+    margin-bottom: 40px;
+    border-radius: 15px;
 }
 
 .skills-hero h1 {
@@ -35,88 +36,120 @@
     opacity: 0.9;
 }
 
-/* Skills Boxes - Adjusted Header Size Only */
-.skill-box {
-    background: white;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px;
-    overflow: hidden;
-    transition: transform 0.3s ease;
-    width: 90%; /* Reduced width */
-    max-width: 500px; /* Smaller max-width */
-    margin-left: auto;
-    margin-right: auto;
+/* All Skills Section */
+.all-skills-section {
+    padding: 0 20px;
 }
 
-/* Smaller Category Headers */
-.box-header {
-    background: var(--primary);
-    color: white;
-    padding: 12px 15px; /* Reduced padding */
-    display: flex;
-    align-items: center;
-    min-height: 40px; /* Fixed height */
+.all-skills-section .container {
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
-.box-header i {
-    font-size: 1.3rem; /* Smaller icon */
-    margin-right: 10px; /* Tighter spacing */
-}
-
-.box-header h2 {
-    font-size: 1.2rem; /* Smaller text */
-    margin: 0;
-}
-
-/* Original Skill Items Size (unchanged) */
-.box-content {
-    padding: 25px;
+.skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
     gap: 20px;
+    justify-content: center;
 }
 
+/* Skill Item */
 .skill-item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 15px;
-    border-radius: 8px;
-    background: rgba(108, 99, 255, 0.05);
+    justify-content: center;
+    padding: 25px 15px;
+    border-radius: 12px;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
     transition: all 0.3s ease;
+    text-align: center;
+    min-height: 140px;
 }
 
 .skill-item:hover {
-    background: rgba(108, 99, 255, 0.15);
-    transform: scale(1.05);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(108, 99, 255, 0.15);
+    background: rgba(108, 99, 255, 0.05);
 }
 
 .skill-item i {
-    font-size: 2.2rem; /* Original size */
+    font-size: 2.5rem;
     color: var(--primary);
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .skill-item span {
-    font-weight: 500;
+    font-weight: 600;
     color: var(--dark);
-    text-align: center;
+    font-size: 1rem;
 }
+
+/* Specific icon colors */
+.skill-item .fa-html5 { color: #E34F26; }
+.skill-item .fa-css3-alt { color: #1572B6; }
+.skill-item .fa-js-square { color: #F7DF1E; }
+.skill-item .fa-react { color: #61DAFB; }
+.skill-item .fa-php { color: #777BB4; }
+.skill-item .fa-node-js { color: #339933; }
+.skill-item .fa-python { color: #3776AB; }
+.skill-item .fa-java { color: #007396; }
+.skill-item .fa-git-alt { color: #F05032; }
+.skill-item .fa-github { color: #181717; }
+.skill-item .fa-linux { color: #FCC624; }
+.skill-item .fa-chart-bar { color: #F2C811; }
 
 /* Responsive Design */
-@media (max-width: 768px) {
-    .skill-box {
-        width: 95%; /* Slightly wider on mobile */
-    }
-    
-    .box-content {
-        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+@media (max-width: 992px) {
+    .skills-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
     }
 }
 
-@media (max-width: 480px) {
-    .box-content {
+@media (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+    }
+    
+    .skill-item {
+        padding: 20px 10px;
+        min-height: 130px;
+    }
+    
+    .skill-item i {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .skills-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+    }
+    
+    .skills-hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .skill-item {
+        min-height: 120px;
+        padding: 18px 8px;
+    }
+    
+    .skill-item i {
+        font-size: 2rem;
+        margin-bottom: 12px;
+    }
+    
+    .skill-item span {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .skills-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
