@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://https://hansana.vercel.app/sitemap.xml
