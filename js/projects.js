@@ -19,10 +19,18 @@ const projects = [
     {
         title: "Wellness Tracker",
         description: "An Android habit tracking app built with Kotlin that helps users build positive habits. Features include daily tracking, progress visualization with charts, reminders, achievement badges, and local data storage using Room Database.",
-        image: "images/welnesstrack.png",
+        image: "images/wellnesstrack.png",
         tags: ["Kotlin", "Android", "Room Database", "Material Design", "MVVM", "Coroutines"],
         code: "https://github.com/hansana-samaraweera/wellness-tracker",
         category: "kotlin"
+    },
+    {
+        title: "Snazzy- Shoe Store",
+        description: "A E-commerce store that allows users to browse and purchase shoes online with user authentication, shopping cart, and payment integration.",
+        image: "images/snazzy.jpg",
+        tags: ["React", "Node.js", "MongoDB", "MERN stack"],
+        code: "https://github.com/BinadaPasandul/snazzy",
+        category: "web-dev`"
     }
 ];
 
