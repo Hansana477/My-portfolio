@@ -1,6 +1,22 @@
 // Project data
 const projects = [
     {
+        title: "Snazzy- Shoe Store",
+        description: "A E-commerce store that allows users to browse and purchase shoes online with user authentication, shopping cart, and payment integration.",
+        image: "images/snazzy.jpg",
+        tags: ["React", "Node.js", "MongoDB", "MERN stack"],
+        code: "https://github.com/BinadaPasandul/snazzy",
+        category: "web-dev`"
+    },
+    {
+        title: "InkNest - Blogging Platform",
+        description: "A full-stack blog platform with admin post management, user engagement (likes/comments via AJAX), secure auth (roles, email resets via Gmail SMTP), search/pagination, image uploads, dark/light mode, and Azure deployment.",
+        image: "images/inknest.png",
+        tags: ["ASP.NET Core", ".NET 10", "EF Core", "Bootstrap 5", "Azure", "Identity"],
+        code: "https://github.com/Hansana477/Blog",
+        category: "web-dev"
+    },
+    {
         title: "Online Gaming Store",
         description: "A gaming store where players can buy games online with user authentication, shopping cart, and payment integration.",
         image: "images/gaming.png",
@@ -15,23 +31,9 @@ const projects = [
         tags: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
         code: "https://github.com/Hansana477/CaptureEye",
         category: "web-dev"
-    },
-    {
-        title: "Wellness Tracker",
-        description: "An Android habit tracking app built with Kotlin that helps users build positive habits. Features include daily tracking, progress visualization with charts, reminders, achievement badges, and local data storage using Room Database.",
-        image: "images/wellnesstrack.png",
-        tags: ["Kotlin", "Android", "Room Database", "Material Design", "MVVM", "Coroutines"],
-        code: "https://github.com/hansana-samaraweera/wellness-tracker",
-        category: "kotlin"
-    },
-    {
-        title: "Snazzy- Shoe Store",
-        description: "A E-commerce store that allows users to browse and purchase shoes online with user authentication, shopping cart, and payment integration.",
-        image: "images/snazzy.jpg",
-        tags: ["React", "Node.js", "MongoDB", "MERN stack"],
-        code: "https://github.com/BinadaPasandul/snazzy",
-        category: "web-dev`"
     }
+
+    
 ];
 
 // Display projects
