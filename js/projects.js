@@ -1,100 +1,146 @@
-// Project data
+// =====================
+// Project Data
+// =====================
 const projects = [
+    // ---------- WEB PROJECTS ----------
     {
-        title: "Snazzy- Shoe Store",
-        description: "A E-commerce store that allows users to browse and purchase shoes online with user authentication, shopping cart, and payment integration.",
+        title: "Snazzy - Shoe Store",
+        description: "MERN e-commerce platform with JWT auth, cart, admin dashboard, and Stripe payments.",
         image: "images/snazzy.jpg",
         tags: ["React", "Node.js", "MongoDB", "MERN stack"],
         code: "https://github.com/BinadaPasandul/snazzy",
-        category: "web-dev`"
+        category: "web-dev"
     },
     {
         title: "InkNest - Blogging Platform",
-        description: "A full-stack blog platform with admin post management, user engagement (likes/comments via AJAX), secure auth (roles, email resets via Gmail SMTP), search/pagination, image uploads, dark/light mode, and Azure deployment.",
+        description: "ASP.NET Core blog with Identity auth, roles, AJAX comments, SMTP email, and Azure deployment.",
         image: "images/inknest.png",
-        tags: ["ASP.NET Core", ".NET 10", "EF Core", "Bootstrap 5", "Azure", "Identity"],
+        tags: ["ASP.NET Core", ".NET", "Azure", "Bootstrap"],
         code: "https://github.com/Hansana477/Blog",
         category: "web-dev"
     },
     {
         title: "Online Gaming Store",
-        description: "A gaming store where players can buy games online with user authentication, shopping cart, and payment integration.",
+        description: "Java MVC web app with JSP/Servlets, user management, and MySQL.",
         image: "images/gaming.png",
-        tags: ["Java", "HTML", "CSS", "JavaScript", "MySQL"],
+        tags: ["Java", "MySQL", "HTML", "CSS"],
         code: "https://github.com/Hansana477/online-gaming-system",
-        category: "web-dev"
+        category: "java"
     },
     {
         title: "Photography Management System",
-        description: "A system where photographers can sell their services and customers can book sessions, view portfolios, and make payments.",
+        description: "PHP-based system for photographer booking, portfolios, and payments.",
         image: "images/photography.png",
-        tags: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
+        tags: ["PHP", "JavaScript", "MySQL"],
         code: "https://github.com/Hansana477/CaptureEye",
         category: "web-dev"
-    }
+    },
 
-    
+    // ---------- CV / DATA SCIENCE PROJECTS ----------
+    {
+        title: "Customer Shopping Behavior Analysis",
+        description: "EDA using Python, SQL Server analysis, and Power BI dashboard for customer insights.",
+        image: "images/customer.png",
+        tags: ["Python", "SQL Server", "Power BI", "Pandas"],
+        code: "https://github.com/Hansana477/Customer-Shopping-Behavior-analysis",
+        category: "ml-ai"
+    },
+    {
+        title: "SMS Spam Detection System",
+        description: "Naive Bayes ML model with 97% accuracy, deployed using Flask.",
+        image: "images/spam.jpg",
+        tags: ["Python", "Machine Learning", "Flask", "Scikit-learn"],
+        code: "https://github.com/Hansana477/sms-spam-detection",
+        category: "ml-ai"
+    },
+    {
+        title: "Weather Prediction System",
+        description: "ML + full-stack app using Linear Regression and OpenWeatherMap API.",
+        image: "images/weather.png",
+        tags: ["Python", "Machine Learning", "MongoDB", "Chart.js"],
+        code: "https://github.com/Hansana477/Weather-prediction-system",
+        category: "ml-ai"
+    }
 ];
 
-// Display projects
-function displayProjects(filter = "all") {
+// =====================
+// Display Projects
+// =====================
+function renderProjects(projectList) {
     const projectsList = document.getElementById("projects-list");
     projectsList.innerHTML = "";
 
-    const filteredProjects = filter === "all" 
-        ? projects 
-        : projects.filter(project => project.category === filter);
-
-    if (filteredProjects.length === 0) {
+    if (projectList.length === 0) {
         projectsList.innerHTML = `
             <div class="no-projects">
                 <i class="fas fa-folder-open"></i>
-                <h3>No projects found in this category</h3>
-                <p>Check back soon for new projects!</p>
+                <h3>No projects found</h3>
             </div>
         `;
         return;
     }
 
-    filteredProjects.forEach(project => {
-        const projectCard = document.createElement("div");
-        projectCard.className = "project-card";
-        projectCard.setAttribute("data-category", project.category);
-        
-        projectCard.innerHTML = `
+    projectList.forEach(project => {
+        const card = document.createElement("div");
+        card.className = "project-card";
+
+        card.innerHTML = `
             <div class="project-image">
-                <img src="${project.image}" alt="${project.title}" 
-                     onerror="this.onerror=null; this.src='https://via.placeholder.com/400x250/7F52FF/ffffff?text=${encodeURIComponent(project.title)}';">
+                <img src="${project.image}"
+                     onerror="this.src='https://via.placeholder.com/400x250?text=${encodeURIComponent(project.title)}'">
             </div>
             <div class="project-info">
                 <h3>${project.title}</h3>
                 <p>${project.description}</p>
                 <div class="project-tags">
-                    ${project.tags.map(tag => `<span>${tag}</span>`).join("")}
+                    ${project.tags.map(tag =>
+                        `<span class="tag" data-tag="${tag}">${tag}</span>`
+                    ).join("")}
                 </div>
                 <div class="project-links">
-                    <a href="${project.code}" class="code" target="_blank">
+                    <a href="${project.code}" target="_blank">
                         <i class="fab fa-github"></i> View Code
                     </a>
                 </div>
             </div>
         `;
-        
-        projectsList.appendChild(projectCard);
+        projectsList.appendChild(card);
     });
 }
 
-// Filter projects
+// =====================
+// Category Filter
+// =====================
+function filterByCategory(category) {
+    if (category === "all") {
+        renderProjects(projects);
+    } else {
+        renderProjects(projects.filter(p => p.category === category));
+    }
+}
+
+// =====================
+// Tag Click Filter
+// =====================
+document.addEventListener("click", (e) => {
+    if (e.target.classList.contains("tag")) {
+        const tag = e.target.dataset.tag;
+        renderProjects(projects.filter(p => p.tags.includes(tag)));
+    }
+});
+
+// =====================
+// Init
+// =====================
 document.addEventListener("DOMContentLoaded", () => {
-    displayProjects();
-    
-    const filterButtons = document.querySelectorAll(".filter-buttons button");
-    
-    filterButtons.forEach(button => {
-        button.addEventListener("click", () => {
-            filterButtons.forEach(btn => btn.classList.remove("active"));
-            button.classList.add("active");
-            displayProjects(button.dataset.filter);
+    renderProjects(projects);
+
+    document.querySelectorAll(".filter-buttons button").forEach(btn => {
+        btn.addEventListener("click", () => {
+            document.querySelectorAll(".filter-buttons button")
+                .forEach(b => b.classList.remove("active"));
+            btn.classList.add("active");
+            filterByCategory(btn.dataset.filter);
         });
     });
 });
