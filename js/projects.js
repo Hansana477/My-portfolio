@@ -60,6 +60,14 @@ const projects = [
         tags: ["Python", "Machine Learning", "MongoDB", "Chart.js"],
         code: "https://github.com/Hansana477/Weather-prediction-system",
         category: "ml-ai"
+    },
+     {
+        title: "Face Recognition Attendance System",
+        description: "Automated attendance system using real-time face recognition with OpenCV and CSV logging.",
+        image: "images/face.png",
+        tags: ["Python", "OpenCV", "Machine Learning", "Attendance System"],
+        code: "https://github.com/Hansana477/Face-recognition-attendance-system",
+        category: "ml-ai"
     }
 ];
 
