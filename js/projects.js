@@ -4,6 +4,22 @@
 const projects = [
     // ---------- WEB PROJECTS ----------
     {
+    title: "T20 World Cup 2026 Match Predictor",
+    description: "Built an agentic AI cricket prediction system with LangChain, LangGraph, Flask, Groq API, and real-time sports data integration.",
+    image: "images/t20.jpg",
+    tags: ["Python", "LangChain", "LangGraph", "Flask", "Groq API"],
+    code: "https://github.com/Hansana477/t20predictor",
+    category: "ml-ai"
+},
+{
+    title: "Pet Identifier & Care Assistant",
+    description: "Developed an AI dog breed classifier and RAG-based pet care assistant using PyTorch, EfficientNet, Gradio, LangChain, LangGraph, and ChromaDB.",
+    image: "images/pet.png",
+    tags: ["Python", "PyTorch", "EfficientNet", "LangChain", "RAG"],
+    code: "https://github.com/Hansana477/pet-identifier",
+    category: "ml-ai"
+},
+    {
         title: "Snazzy - Shoe Store",
         description: "MERN e-commerce platform with JWT auth, cart, admin dashboard, and Stripe payments.",
         image: "images/snazzy.jpg",
