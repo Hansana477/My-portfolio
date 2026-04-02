@@ -3,17 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Skills | Portfolio</title>
+    <title>Skills | Hansana Samaraweera</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/skills.css">
 </head>
-<body>
-    <!-- Header -->
-    <header id="header">
-        <a href="index.html" class="logo"><i class="fas fa-code"></i> Hansana<span>Samaraweera</span></a>
-        <nav>
+<body data-page="skills">
+    <div class="site-backdrop" aria-hidden="true">
+        <div class="aurora aurora-a"></div>
+        <div class="aurora aurora-b"></div>
+        <div class="grid-plane"></div>
+        <div class="noise-layer"></div>
+    </div>
+
+    <header class="site-header" id="header">
+        <a href="index.html" class="logo">
+            <span class="logo-mark"><i class="fas fa-cube"></i></span>
+            <span>Hansana <strong>Samaraweera</strong></span>
+        </a>
+
+        <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <nav id="primary-nav">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -24,93 +40,113 @@
         </nav>
     </header>
 
-    <!-- All Skills Section -->
-    <main class="skills-container">
-        <section class="skills-hero">
-            <div class="container">
-                <h1><i class="fas fa-laptop-code"></i> My <span>Skills</span></h1>
-                <p>Technologies and tools that I am familiar with</p>
+    <main class="site-shell page-shell">
+        <section class="page-hero panel" data-reveal>
+            <div>
+                <p class="eyebrow">Skill Matrix</p>
+                <h1>Tools I'm building with on my AI engineering path.</h1>
+                <p>My stack combines machine learning, data work, backend engineering, and product development so I can build intelligent systems end to end.</p>
+            </div>
+            <div class="hero-badges">
+                <span>Machine Learning</span>
+                <span>Data</span>
+                <span>Backend</span>
+                <span>Product Engineering</span>
             </div>
         </section>
 
-        <section class="all-skills-section">
-            <div class="container">
-                <div class="skills-grid">
-                    <!-- Frontend Skills -->
-                    <div class="skill-item">
-                        <i class="fab fa-html5"></i>
-                        <span>HTML</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fab fa-css3-alt"></i>
-                        <span>CSS</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fab fa-js-square"></i>
-                        <span>JavaScript</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fas fa-wind"></i>
-                        <span>Tailwind CSS</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fab fa-react"></i>
-                        <span>React</span>
-                    </div>
-
-                    <!-- Backend Skills -->
-                    <div class="skill-item">
-                        <i class="fab fa-php"></i>
-                        <span>PHP</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fas fa-database"></i>
-                        <span>MySQL</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fab fa-node-js"></i>
-                        <span>Node.js</span>
-                    </div>
-
-                    <!-- Programming Languages -->
-                    <div class="skill-item">
-                        <i class="fas fa-c"></i>
-                        <span>C</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fas fa-plus"></i>
-                        <span>C++</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fab fa-java"></i>
-                        <span>Java</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fab fa-python"></i>
-                        <span>Python</span>
-                    </div>
-
-                    <!-- Tools & Others -->
-                    <div class="skill-item">
-                        <i class="fab fa-git-alt"></i>
-                        <span>Git</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fab fa-github"></i>
-                        <span>GitHub</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fab fa-linux"></i>
-                        <span>Linux</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fas fa-chart-bar"></i>
-                        <span>Power BI</span>
-                    </div>
+        <section class="skills-board" data-reveal>
+            <article class="skill-cluster panel" data-tilt>
+                <p class="eyebrow">Foundations</p>
+                <h2>Interfaces and product delivery</h2>
+                <div class="skill-tags">
+                    <span><i class="fab fa-html5"></i> HTML</span>
+                    <span><i class="fab fa-css3-alt"></i> CSS</span>
+                    <span><i class="fab fa-js"></i> JavaScript</span>
+                    <span><i class="fab fa-react"></i> React</span>
+                    <span><i class="fas fa-wind"></i> Tailwind CSS</span>
                 </div>
+            </article>
+
+            <article class="skill-cluster panel" data-tilt>
+                <p class="eyebrow">Backend</p>
+                <h2>Application logic and integration</h2>
+                <div class="skill-tags">
+                    <span><i class="fab fa-node-js"></i> Node.js</span>
+                    <span><i class="fab fa-php"></i> PHP</span>
+                    <span><i class="fab fa-java"></i> Java</span>
+                    <span><i class="fas fa-database"></i> MySQL</span>
+                    <span><i class="fas fa-server"></i> ASP.NET Core</span>
+                </div>
+            </article>
+
+            <article class="skill-cluster panel" data-tilt>
+                <p class="eyebrow">Data &amp; AI</p>
+                <h2>Models, analysis, and intelligent workflows</h2>
+                <div class="skill-tags">
+                    <span><i class="fab fa-python"></i> Python</span>
+                    <span><i class="fas fa-brain"></i> Machine Learning</span>
+                    <span><i class="fas fa-chart-line"></i> Power BI</span>
+                    <span><i class="fas fa-database"></i> SQL Server</span>
+                    <span><i class="fas fa-robot"></i> LangChain</span>
+                    <span><i class="fas fa-diagram-project"></i> LangGraph</span>
+                </div>
+            </article>
+
+            <article class="skill-cluster panel" data-tilt>
+                <p class="eyebrow">Workflow</p>
+                <h2>Tools that support engineering execution</h2>
+                <div class="skill-tags">
+                    <span><i class="fab fa-git-alt"></i> Git</span>
+                    <span><i class="fab fa-github"></i> GitHub</span>
+                    <span><i class="fab fa-linux"></i> Linux</span>
+                    <span><i class="fas fa-cloud"></i> Azure Basics</span>
+                    <span><i class="fas fa-laptop-code"></i> VS Code</span>
+                </div>
+            </article>
+        </section>
+
+        <section class="capability-panel panel" data-reveal>
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">Capabilities</p>
+                    <h2>How these skills support AI engineering</h2>
+                </div>
+            </div>
+            <div class="capability-grid">
+                <article class="mini-panel" data-tilt>
+                    <h3>Model-Backed Applications</h3>
+                    <p>I can combine machine learning ideas with application logic to create products people can actually use.</p>
+                </article>
+                <article class="mini-panel" data-tilt>
+                    <h3>Data-to-Decision Workflows</h3>
+                    <p>I enjoy turning raw data, analysis, and model output into systems that produce useful insight or automation.</p>
+                </article>
+                <article class="mini-panel" data-tilt>
+                    <h3>Engineering + Presentation</h3>
+                    <p>I care about both technical implementation and clear presentation, because strong AI products need both.</p>
+                </article>
             </div>
         </section>
     </main>
+
+    <footer class="site-footer">
+        <div class="footer-brand">
+            <div class="footer-badge">
+                <i class="fas fa-microchip"></i>
+            </div>
+            <div>
+                <p>Hansana Samaraweera</p>
+                <span>Aspiring AI engineer building intelligent systems and data-driven products.</span>
+            </div>
+        </div>
+        <div class="footer-links">
+            <a href="https://github.com/Hansana477" target="_blank" rel="noreferrer"><i class="fab fa-github"></i><span>GitHub</span></a>
+            <a href="https://www.linkedin.com/in/hansana-samaraweera-4ba719311/" target="_blank" rel="noreferrer"><i class="fab fa-linkedin-in"></i><span>LinkedIn</span></a>
+            <a href="mailto:hansanasamaraweera13@gmail.com"><i class="fas fa-envelope"></i><span>Email</span></a>
+        </div>
+        <p class="footer-copy"><i class="far fa-copyright"></i> <span data-year></span> Hansana Samaraweera</p>
+    </footer>
 
     <script src="js/script.js"></script>
 </body>

@@ -1,35 +1,31 @@
-// =====================
-// Project Data
-// =====================
 const projects = [
-    // ---------- WEB PROJECTS ----------
     {
-    title: "T20 World Cup 2026 Match Predictor",
-    description: "Built an agentic AI cricket prediction system with LangChain, LangGraph, Flask, Groq API, and real-time sports data integration.",
-    image: "images/t20.jpg",
-    tags: ["Python", "LangChain", "LangGraph", "Flask", "Groq API"],
-    code: "https://github.com/Hansana477/t20predictor",
-    category: "ml-ai"
-},
-{
-    title: "Pet Identifier & Care Assistant",
-    description: "Developed an AI dog breed classifier and RAG-based pet care assistant using PyTorch, EfficientNet, Gradio, LangChain, LangGraph, and ChromaDB.",
-    image: "images/pet.png",
-    tags: ["Python", "PyTorch", "EfficientNet", "LangChain", "RAG"],
-    code: "https://github.com/Hansana477/pet-identifier",
-    category: "ml-ai"
-},
+        title: "T20 World Cup 2026 Match Predictor",
+        description: "Agentic AI cricket prediction system with LangChain, LangGraph, Flask, Groq API, and real-time sports data integration.",
+        image: "images/t20.jpg",
+        tags: ["Python", "LangChain", "LangGraph", "Flask", "Groq API"],
+        code: "https://github.com/Hansana477/t20predictor",
+        category: "ml-ai"
+    },
     {
-        title: "Snazzy - Shoe Store",
-        description: "MERN e-commerce platform with JWT auth, cart, admin dashboard, and Stripe payments.",
+        title: "Pet Identifier & Care Assistant",
+        description: "Dog breed classifier and retrieval-augmented care assistant using PyTorch, EfficientNet, Gradio, LangChain, LangGraph, and ChromaDB.",
+        image: "images/pet.png",
+        tags: ["Python", "PyTorch", "EfficientNet", "LangChain", "RAG"],
+        code: "https://github.com/Hansana477/pet-identifier",
+        category: "ml-ai"
+    },
+    {
+        title: "Snazzy Shoe Store",
+        description: "MERN e-commerce platform with authentication, cart flows, admin tools, and Stripe payments.",
         image: "images/snazzy.jpg",
-        tags: ["React", "Node.js", "MongoDB", "MERN stack"],
+        tags: ["React", "Node.js", "MongoDB", "Stripe"],
         code: "https://github.com/BinadaPasandul/snazzy",
         category: "web-dev"
     },
     {
-        title: "InkNest - Blogging Platform",
-        description: "ASP.NET Core blog with Identity auth, roles, AJAX comments, SMTP email, and Azure deployment.",
+        title: "InkNest Blogging Platform",
+        description: "ASP.NET Core blog with identity, role management, AJAX comments, SMTP email, and Azure deployment.",
         image: "images/inknest.png",
         tags: ["ASP.NET Core", ".NET", "Azure", "Bootstrap"],
         code: "https://github.com/Hansana477/Blog",
@@ -37,7 +33,7 @@ const projects = [
     },
     {
         title: "Online Gaming Store",
-        description: "Java MVC web app with JSP/Servlets, user management, and MySQL.",
+        description: "Java MVC web application using JSP/Servlets, user management, and MySQL-backed product handling.",
         image: "images/gaming.png",
         tags: ["Java", "MySQL", "HTML", "CSS"],
         code: "https://github.com/Hansana477/online-gaming-system",
@@ -45,17 +41,15 @@ const projects = [
     },
     {
         title: "Photography Management System",
-        description: "PHP-based system for photographer booking, portfolios, and payments.",
+        description: "PHP platform for photographer bookings, portfolio presentation, and payment-related workflows.",
         image: "images/photography.png",
         tags: ["PHP", "JavaScript", "MySQL"],
         code: "https://github.com/Hansana477/CaptureEye",
         category: "web-dev"
     },
-
-    // ---------- CV / DATA SCIENCE PROJECTS ----------
     {
         title: "Customer Shopping Behavior Analysis",
-        description: "EDA using Python, SQL Server analysis, and Power BI dashboard for customer insights.",
+        description: "End-to-end analysis workflow with Python, SQL Server, and Power BI for customer insight discovery.",
         image: "images/customer.png",
         tags: ["Python", "SQL Server", "Power BI", "Pandas"],
         code: "https://github.com/Hansana477/Customer-Shopping-Behavior-analysis",
@@ -63,7 +57,7 @@ const projects = [
     },
     {
         title: "SMS Spam Detection System",
-        description: "Naive Bayes ML model with 97% accuracy, deployed using Flask.",
+        description: "Machine learning model with Flask deployment for classifying spam messages with high accuracy.",
         image: "images/spam.jpg",
         tags: ["Python", "Machine Learning", "Flask", "Scikit-learn"],
         code: "https://github.com/Hansana477/sms-spam-detection",
@@ -71,100 +65,96 @@ const projects = [
     },
     {
         title: "Weather Prediction System",
-        description: "ML + full-stack app using Linear Regression and OpenWeatherMap API.",
+        description: "Prediction and visualization app powered by machine learning, MongoDB, and OpenWeatherMap data.",
         image: "images/weather.png",
         tags: ["Python", "Machine Learning", "MongoDB", "Chart.js"],
         code: "https://github.com/Hansana477/Weather-prediction-system",
         category: "ml-ai"
     },
-     {
+    {
         title: "Face Recognition Attendance System",
-        description: "Automated attendance system using real-time face recognition with OpenCV and CSV logging.",
+        description: "Real-time attendance system using computer vision, OpenCV, and CSV-based logging automation.",
         image: "images/face.png",
-        tags: ["Python", "OpenCV", "Machine Learning", "Attendance System"],
+        tags: ["Python", "OpenCV", "Machine Learning", "Automation"],
         code: "https://github.com/Hansana477/Face-recognition-attendance-system",
         category: "ml-ai"
     }
 ];
 
-// =====================
-// Display Projects
-// =====================
+const categoryLabels = {
+    "ml-ai": "ML / Data Science",
+    "web-dev": "Web Development",
+    "java": "Java"
+};
+
 function renderProjects(projectList) {
     const projectsList = document.getElementById("projects-list");
+
+    if (!projectsList) {
+        return;
+    }
+
     projectsList.innerHTML = "";
 
-    if (projectList.length === 0) {
+    if (!projectList.length) {
         projectsList.innerHTML = `
-            <div class="no-projects">
-                <i class="fas fa-folder-open"></i>
+            <article class="panel no-projects">
                 <h3>No projects found</h3>
-            </div>
+                <p>Try switching filters to explore more of the portfolio.</p>
+            </article>
         `;
         return;
     }
 
-    projectList.forEach(project => {
-        const card = document.createElement("div");
+    projectList.forEach((project, index) => {
+        const card = document.createElement("article");
         card.className = "project-card";
-
+        card.setAttribute("data-tilt", "");
+        card.dataset.tiltStrength = "10";
         card.innerHTML = `
-            <div class="project-image">
-                <img src="${project.image}"
-                     onerror="this.src='https://via.placeholder.com/400x250?text=${encodeURIComponent(project.title)}'">
+            <img src="${project.image}" alt="${project.title} preview" loading="lazy">
+            <div class="project-meta">
+                <span class="project-category">${categoryLabels[project.category] || project.category}</span>
+                <span class="project-index">${String(index + 1).padStart(2, "0")}</span>
             </div>
-            <div class="project-info">
+            <div class="project-copy">
                 <h3>${project.title}</h3>
                 <p>${project.description}</p>
-                <div class="project-tags">
-                    ${project.tags.map(tag =>
-                        `<span class="tag" data-tag="${tag}">${tag}</span>`
-                    ).join("")}
-                </div>
-                <div class="project-links">
-                    <a href="${project.code}" target="_blank">
-                        <i class="fab fa-github"></i> View Code
-                    </a>
-                </div>
             </div>
+            <div class="project-tags">
+                ${project.tags.map((tag) => `<span>${tag}</span>`).join("")}
+            </div>
+            <a class="project-link" href="${project.code}" target="_blank" rel="noreferrer">
+                <i class="fab fa-github"></i>
+                View Code
+            </a>
         `;
         projectsList.appendChild(card);
     });
+
+    window.initializeTiltCards?.();
 }
 
-// =====================
-// Category Filter
-// =====================
 function filterByCategory(category) {
     if (category === "all") {
         renderProjects(projects);
-    } else {
-        renderProjects(projects.filter(p => p.category === category));
+        return;
     }
+
+    renderProjects(projects.filter((project) => project.category === category));
 }
 
-// =====================
-// Tag Click Filter
-// =====================
-document.addEventListener("click", (e) => {
-    if (e.target.classList.contains("tag")) {
-        const tag = e.target.dataset.tag;
-        renderProjects(projects.filter(p => p.tags.includes(tag)));
-    }
-});
-
-// =====================
-// Init
-// =====================
 document.addEventListener("DOMContentLoaded", () => {
     renderProjects(projects);
 
-    document.querySelectorAll(".filter-buttons button").forEach(btn => {
-        btn.addEventListener("click", () => {
-            document.querySelectorAll(".filter-buttons button")
-                .forEach(b => b.classList.remove("active"));
-            btn.classList.add("active");
-            filterByCategory(btn.dataset.filter);
+    document.querySelectorAll(".filter-buttons button").forEach((button) => {
+        button.addEventListener("click", () => {
+            document
+                .querySelectorAll(".filter-buttons button")
+                .forEach((item) => item.classList.remove("active"));
+
+            button.classList.add("active");
+            filterByCategory(button.dataset.filter);
         });
     });
 });

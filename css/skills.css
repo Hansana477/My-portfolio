@@ -1,155 +1,68 @@
-:root {
-    --primary: #6C63FF;
-    --secondary: #4D44DB;
-    --dark: #2F2E41;
-    --light: #F8F9FA;
-}
-
-/* Skills Container */
-.skills-container {
-    padding-top: 80px;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding-bottom: 50px;
-}
-
-.skills-hero {
-    background: linear-gradient(135deg, #2F2E41 0%, #4D44DB 100%);
-    color: white;
-    padding: 60px 0;
-    text-align: center;
-    margin-bottom: 40px;
-    border-radius: 15px;
-}
-
-.skills-hero h1 {
-    font-size: 2.2rem;
-    margin-bottom: 15px;
-}
-
-.skills-hero h1 span {
-    color: #6C63FF;
-}
-
-.skills-hero p {
-    font-size: 1.1rem;
-    opacity: 0.9;
-}
-
-/* All Skills Section */
-.all-skills-section {
-    padding: 0 20px;
-}
-
-.all-skills-section .container {
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.skills-grid {
+.skills-board {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
-    gap: 20px;
-    justify-content: center;
+    gap: 24px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-/* Skill Item */
-.skill-item {
+.skill-cluster,
+.capability-panel {
+    padding: 28px;
+}
+
+.skill-cluster h2 {
+    font-size: 1.7rem;
+    margin-bottom: 18px;
+}
+
+.skill-tags {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-tags span {
     align-items: center;
-    justify-content: center;
-    padding: 25px 15px;
-    border-radius: 12px;
-    background: white;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-    transition: all 0.3s ease;
-    text-align: center;
-    min-height: 140px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 999px;
+    color: var(--text);
+    display: inline-flex;
+    gap: 10px;
+    font-weight: 700;
+    min-height: 42px;
+    padding: 0 16px;
 }
 
-.skill-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(108, 99, 255, 0.15);
-    background: rgba(108, 99, 255, 0.05);
+.skill-tags i {
+    color: var(--accent);
 }
 
-.skill-item i {
-    font-size: 2.5rem;
-    color: var(--primary);
-    margin-bottom: 15px;
+.capability-grid {
+    display: grid;
+    gap: 18px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin-top: 24px;
 }
 
-.skill-item span {
-    font-weight: 600;
-    color: var(--dark);
-    font-size: 1rem;
+.capability-grid .mini-panel {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-/* Specific icon colors */
-.skill-item .fa-html5 { color: #E34F26; }
-.skill-item .fa-css3-alt { color: #1572B6; }
-.skill-item .fa-js-square { color: #F7DF1E; }
-.skill-item .fa-react { color: #61DAFB; }
-.skill-item .fa-php { color: #777BB4; }
-.skill-item .fa-node-js { color: #339933; }
-.skill-item .fa-python { color: #3776AB; }
-.skill-item .fa-java { color: #007396; }
-.skill-item .fa-git-alt { color: #F05032; }
-.skill-item .fa-github { color: #181717; }
-.skill-item .fa-linux { color: #FCC624; }
-.skill-item .fa-chart-bar { color: #F2C811; }
+.capability-grid h3 {
+    margin-bottom: 10px;
+}
 
-/* Responsive Design */
-@media (max-width: 992px) {
-    .skills-grid {
-        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+@media (max-width: 960px) {
+    .skills-board,
+    .capability-grid {
+        grid-template-columns: 1fr;
     }
 }
 
-@media (max-width: 768px) {
-    .skills-grid {
-        grid-template-columns: repeat(4, 1fr);
-        gap: 15px;
-    }
-    
-    .skill-item {
-        padding: 20px 10px;
-        min-height: 130px;
-    }
-    
-    .skill-item i {
-        font-size: 2.2rem;
-    }
-}
-
-@media (max-width: 576px) {
-    .skills-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 12px;
-    }
-    
-    .skills-hero h1 {
-        font-size: 1.8rem;
-    }
-    
-    .skill-item {
-        min-height: 120px;
-        padding: 18px 8px;
-    }
-    
-    .skill-item i {
-        font-size: 2rem;
-        margin-bottom: 12px;
-    }
-    
-    .skill-item span {
-        font-size: 0.9rem;
-    }
-}
-
-@media (max-width: 400px) {
-    .skills-grid {
-        grid-template-columns: repeat(2, 1fr);
+@media (max-width: 640px) {
+    .skill-cluster,
+    .capability-panel {
+        padding: 22px;
     }
 }

@@ -3,16 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Me | Portfolio</title>
+    <title>Contact | Hansana Samaraweera</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/contact.css">
 </head>
-<body>
-    <header id="header">
-        <a href="index.html" class="logo"><i class="fas fa-code"></i> Hansana<span>Samaraweera</span></a>
-        <nav>
+<body data-page="contact">
+    <div class="site-backdrop" aria-hidden="true">
+        <div class="aurora aurora-a"></div>
+        <div class="aurora aurora-b"></div>
+        <div class="grid-plane"></div>
+        <div class="noise-layer"></div>
+    </div>
+
+    <header class="site-header" id="header">
+        <a href="index.html" class="logo">
+            <span class="logo-mark"><i class="fas fa-cube"></i></span>
+            <span>Hansana <strong>Samaraweera</strong></span>
+        </a>
+
+        <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <nav id="primary-nav">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -23,63 +40,107 @@
         </nav>
     </header>
 
-    <main class="contact-container">
-        <section class="contact-hero">
-            <h1><i class="fas fa-paper-plane"></i> Get In <span>Touch</span></h1>
-            <p>Reach out for collaborations or just to say hello!</p>
+    <main class="site-shell page-shell">
+        <section class="page-hero panel" data-reveal>
+            <div>
+                <p class="eyebrow">Contact</p>
+                <h1>Let's build intelligent systems together.</h1>
+                <p>If you have an AI internship, research opportunity, collaboration idea, or machine learning project, I'd be happy to connect.</p>
+            </div>
+            <div class="hero-badges">
+                <span>Fast Response</span>
+                <span>Open to AI Internships</span>
+                <span>Available for Collaboration</span>
+            </div>
         </section>
 
-        <section class="contact-content">
-            <div class="contact-form">
+        <section class="contact-layout" data-reveal>
+            <article class="contact-form-panel panel" data-tilt>
+                <p class="eyebrow">Send a Message</p>
+                <h2>Tell me about your AI project or opportunity</h2>
                 <form id="contactForm" action="https://formspree.io/f/xeokkdnq" method="POST">
                     <input type="hidden" name="_subject" value="New message from portfolio">
-                    <input type="text" name="_gotcha" style="display:none">
-                    
+                    <input type="text" name="_gotcha" class="honeypot" tabindex="-1" autocomplete="off">
+
                     <div class="form-group">
-                        <input type="text" name="name" placeholder="Your Name" required>
+                        <label for="name">Your Name</label>
+                        <input id="name" type="text" name="name" placeholder="Your name" required>
                     </div>
                     <div class="form-group">
-                        <input type="email" name="_replyto" placeholder="Your Email" required>
+                        <label for="email">Your Email</label>
+                        <input id="email" type="email" name="_replyto" placeholder="you@example.com" required>
                     </div>
                     <div class="form-group">
-                        <input type="text" name="subject" placeholder="Subject">
+                        <label for="subject">Subject</label>
+                        <input id="subject" type="text" name="subject" placeholder="AI project, internship, research, or collaboration">
                     </div>
                     <div class="form-group">
-                        <textarea name="message" placeholder="Your Message" required></textarea>
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Share your AI idea, internship, research role, or opportunity" required></textarea>
                     </div>
                     <button type="submit" class="submit-btn">
-                        <i class="fas fa-paper-plane"></i> Send Message
+                        <i class="fas fa-paper-plane"></i>
+                        Send Message
                     </button>
                 </form>
-            </div>
+            </article>
 
-            <div class="contact-info">
-                <div class="info-card">
+            <aside class="contact-info-panel panel" data-tilt>
+                <p class="eyebrow">Reach Out Directly</p>
+                <h2>Other ways to connect</h2>
+
+                <div class="contact-card">
                     <i class="fas fa-envelope"></i>
-                    <h3>Email</h3>
-                    <a href="mailto:hansanasamaraweera3@gmail.com">hansanasamaraweera3@gmail.com</a>
+                    <div>
+                        <h3>Email</h3>
+                        <a href="mailto:hansanasamaraweera13@gmail.com">hansanasamaraweera13@gmail.com</a>
+                    </div>
                 </div>
-                <div class="info-card">
-                    <i class="fas fa-phone-alt"></i>
-                    <h3>Phone</h3>
-                    <a href="tel:+94704536477">+94 70 453 6477</a>
+
+                <div class="contact-card">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <h3>Phone</h3>
+                        <a href="tel:+94704536477">+94 70 453 6477</a>
+                    </div>
                 </div>
-                <div class="info-card">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <h3>Location</h3>
-                    <p>Malabe, Sri Lanka</p>
+
+                <div class="contact-card">
+                    <i class="fas fa-location-dot"></i>
+                    <div>
+                        <h3>Location</h3>
+                        <p>Malabe, Sri Lanka</p>
+                    </div>
                 </div>
-                
-                <div class="social-links">
-                    <a href="https://github.com/Hansana477"><i class="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/hansana-samaraweera-4ba719311/"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
+
+                <div class="social-row">
+                    <a href="https://github.com/Hansana477" target="_blank" rel="noreferrer">GitHub</a>
+                    <a href="https://www.linkedin.com/in/hansana-samaraweera-4ba719311/" target="_blank" rel="noreferrer">LinkedIn</a>
+                    <a href="resume.pdf" download>Resume</a>
                 </div>
-            </div>
+            </aside>
         </section>
     </main>
 
+    <footer class="site-footer">
+        <div class="footer-brand">
+            <div class="footer-badge">
+                <i class="fas fa-microchip"></i>
+            </div>
+            <div>
+                <p>Hansana Samaraweera</p>
+                <span>Aspiring AI engineer building intelligent systems and data-driven products.</span>
+            </div>
+        </div>
+        <div class="footer-links">
+            <a href="https://github.com/Hansana477" target="_blank" rel="noreferrer"><i class="fab fa-github"></i><span>GitHub</span></a>
+            <a href="https://www.linkedin.com/in/hansana-samaraweera-4ba719311/" target="_blank" rel="noreferrer"><i class="fab fa-linkedin-in"></i><span>LinkedIn</span></a>
+            <a href="mailto:hansanasamaraweera13@gmail.com"><i class="fas fa-envelope"></i><span>Email</span></a>
+        </div>
+        <p class="footer-copy"><i class="far fa-copyright"></i> <span data-year></span> Hansana Samaraweera</p>
+    </footer>
+
+    <script src="js/script.js"></script>
     <script src="js/contact.js"></script>
 </body>
 </html>

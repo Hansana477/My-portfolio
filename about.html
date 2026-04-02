@@ -3,23 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me | IT Student Portfolio</title>
+    <title>About | Hansana Samaraweera</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/about.css">
 </head>
-<body>
-    <!-- Header (consistent with main page) -->
-    <header id="header">
-        <a href="index.html" class="logo"><i class="fas fa-code"></i> Hansana<span>Samaraweera</span></a>
-       
-        
-        <div class="menu-toggle">
+<body data-page="about">
+    <div class="site-backdrop" aria-hidden="true">
+        <div class="aurora aurora-a"></div>
+        <div class="aurora aurora-b"></div>
+        <div class="grid-plane"></div>
+        <div class="noise-layer"></div>
+    </div>
+
+    <header class="site-header" id="header">
+        <a href="index.html" class="logo">
+            <span class="logo-mark"><i class="fas fa-cube"></i></span>
+            <span>Hansana <strong>Samaraweera</strong></span>
+        </a>
+
+        <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav">
             <i class="fas fa-bars"></i>
-        </div>
-        
-        <nav>
+        </button>
+
+        <nav id="primary-nav">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html" class="active">About</a></li>
@@ -30,84 +40,122 @@
         </nav>
     </header>
 
-    <!-- Main Content -->
-    <main class="about-container">
-        <section class="about-hero">
-            <div class="container">
-                <h1>About <span>Me</span></h1>
-                <p>Get to know the person behind the code</p>
+    <main class="site-shell page-shell">
+        <section class="page-hero panel" data-reveal>
+            <div>
+                <p class="eyebrow">About Me</p>
+                <h1>Building toward a future in AI engineering.</h1>
+                <p>I'm a Data Science undergraduate focused on developing the skills, projects, and engineering mindset needed to become an AI engineer.</p>
+            </div>
+            <div class="hero-badges">
+                <span>Based in Malabe</span>
+                <span>Studying at SLIIT</span>
+                <span>Open to new opportunities</span>
             </div>
         </section>
 
-        <section class="personal-info">
-            <div class="container">
-                <div class="profile-grid">
-                    <div class="profile-card">
-                        <div class="profile-image">
-                            <img src="images/profile.jpg" alt="Hansana Samaraweera">
-                        </div>
-                        <div class="profile-details">
-                            <h2>Hansana Samaraweera</h2>
-                            <p class="title">Data Science Undergraduate</p>
-                            <div class="personal-details">
-                                <p><i class="fas fa-map-marker-alt"></i> Malabe</p>
-                                <p><i class="fas fa-university"></i> SLIIT</p>
-                                <p><i class="fas fa-envelope"></i> hansanasamaraweera13@gmail.com</p>
-                                <p><i class="fas fa-phone"></i> +94704536477</p>
-                            </div>
-                            <a href="resume.pdf" class="btn btn-primary" download>
-                                <i class="fas fa-download"></i> Download Resume
-                            </a>
-                        </div>
+        <section class="about-grid" data-reveal>
+            <article class="profile-panel panel" data-tilt>
+                <div class="profile-image-wrap">
+                    <img src="images/profile.jpg" alt="Portrait of Hansana Samaraweera">
+                </div>
+                <div class="profile-copy">
+                    <h2>Hansana Samaraweera</h2>
+                    <p class="profile-role">Aspiring AI Engineer</p>
+                    <div class="detail-list">
+                        <p><i class="fas fa-location-dot"></i> Malabe, Sri Lanka</p>
+                        <p><i class="fas fa-building-columns"></i> Sri Lanka Institute of Information Technology</p>
+                        <p><i class="fas fa-envelope"></i> hansanasamaraweera13@gmail.com</p>
+                        <p><i class="fas fa-phone"></i> +94 70 453 6477</p>
                     </div>
+                    <a href="resume.pdf" class="btn btn-primary" download>Download Resume</a>
+                </div>
+            </article>
 
-                    <div class="bio-card">
-                        <h3>My Story</h3>
-                        <p>I'm a passionate IT student with a focus on full-stack web development, cloud computing, data analyst and data science.</p>
-                        
-                        <p>Currently pursuing my Bachelor's degree in Data Science, I spend my free time contributing to open-source projects, participating in hackathons, and continuously expanding my skill set through online courses and personal projects.</p>
-                           
-                        <div class="interests">
-                            <h4>My Interests</h4>
-                            <div class="interest-tags">
-                                <span class="tag">Web Development</span>
-                                <span class="tag">Cloud Computing</span>
-                                <span class="tag">AI/ML</span>
-                                <span class="tag">Open Source</span>
-                                <span class="tag">Data Analytics</span>
-                            </div>
-                        </div>
-                    </div>
+            <article class="story-panel panel" data-tilt>
+                <p class="eyebrow">My Story</p>
+                <h2>I want to engineer systems that can think, predict, and assist.</h2>
+                <p>My main interest is AI engineering: building the models, workflows, and supporting software that turn data into useful intelligence. I enjoy working across machine learning, backend logic, and product thinking to create systems that solve real problems.</p>
+                <p>Beyond coursework, I spend time building AI-focused personal projects, learning modern tools, and strengthening the foundations needed for production-ready intelligent applications.</p>
+                <div class="pill-list">
+                    <span>AI/ML</span>
+                    <span>Agentic AI</span>
+                    <span>Computer Vision</span>
+                    <span>Data Engineering Basics</span>
+                    <span>Model-Driven Products</span>
+                </div>
+            </article>
+        </section>
+
+        <section class="timeline-section panel" data-reveal>
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">Trajectory</p>
+                    <h2>Education and growth path</h2>
                 </div>
             </div>
-        </section>
-
-        <section class="education-section">
-            <div class="container">
-                <h2 class="section-title">Education</h2>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-date">2025 - Present</div>
-                        <div class="timeline-content">
-                            <h3>SLIIT</h3>
-                            <p class="degree">Bachelor of Science in Data Science</p>
-                            
-                        </div>
+            <div class="timeline">
+                <article class="timeline-item" data-tilt>
+                    <span class="timeline-year">2025 - Present</span>
+                    <div class="timeline-card">
+                        <h3>BSc in Data Science</h3>
+                        <p>Studying at SLIIT with a focus on analytics, machine learning, software development, and the foundations required for AI engineering.</p>
                     </div>
-                    
-                    
-                </div>
+                </article>
+                <article class="timeline-item" data-tilt>
+                    <span class="timeline-year">Current</span>
+                    <div class="timeline-card">
+                        <h3>Project-Based Learning</h3>
+                        <p>Strengthening experience through agentic AI tools, predictive systems, computer vision, analytics, and end-to-end intelligent applications.</p>
+                    </div>
+                </article>
+                <article class="timeline-item" data-tilt>
+                    <span class="timeline-year">Next</span>
+                    <div class="timeline-card">
+                        <h3>Professional Collaborations</h3>
+                        <p>Looking for opportunities where I can grow as an AI engineer by contributing to intelligent products, research, and real-world systems.</p>
+                    </div>
+                </article>
             </div>
-            
         </section>
-     
 
-
+        <section class="values-grid" data-reveal>
+            <article class="mini-panel panel" data-tilt>
+                <p class="eyebrow">How I Work</p>
+                <h3>Build with clarity</h3>
+                <p>I like breaking complex problems into clear steps, especially when building data and AI systems that need to be understandable and reliable.</p>
+            </article>
+            <article class="mini-panel panel" data-tilt>
+                <p class="eyebrow">What Matters</p>
+                <h3>Useful intelligence</h3>
+                <p>I care most about building AI that is practical, well-structured, and connected to real user or business value.</p>
+            </article>
+            <article class="mini-panel panel" data-tilt>
+                <p class="eyebrow">What I'm Seeking</p>
+                <h3>AI teams, hard problems</h3>
+                <p>I'm excited by teams working on machine learning, intelligent automation, computer vision, and AI products that create meaningful impact.</p>
+            </article>
+        </section>
     </main>
 
-    
+    <footer class="site-footer">
+        <div class="footer-brand">
+            <div class="footer-badge">
+                <i class="fas fa-microchip"></i>
+            </div>
+            <div>
+                <p>Hansana Samaraweera</p>
+                <span>Aspiring AI engineer building intelligent systems and data-driven products.</span>
+            </div>
+        </div>
+        <div class="footer-links">
+            <a href="https://github.com/Hansana477" target="_blank" rel="noreferrer"><i class="fab fa-github"></i><span>GitHub</span></a>
+            <a href="https://www.linkedin.com/in/hansana-samaraweera-4ba719311/" target="_blank" rel="noreferrer"><i class="fab fa-linkedin-in"></i><span>LinkedIn</span></a>
+            <a href="mailto:hansanasamaraweera13@gmail.com"><i class="fas fa-envelope"></i><span>Email</span></a>
+        </div>
+        <p class="footer-copy"><i class="far fa-copyright"></i> <span data-year></span> Hansana Samaraweera</p>
+    </footer>
 
     <script src="js/script.js"></script>
-    <script src="js/about.js"></script>
 </body>
 </html>

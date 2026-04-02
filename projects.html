@@ -3,22 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Projects | Data Science Portfolio</title>
+    <title>Projects | Hansana Samaraweera</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/projects.css">
 </head>
-<body>
-    <!-- Header (consistent with other pages) -->
-    <header id="header">
-        <a href="index.html" class="logo"><i class="fas fa-code"></i> Hansana<span>Samaraweera</span></a>
-        
-        <div class="menu-toggle">
+<body data-page="projects">
+    <div class="site-backdrop" aria-hidden="true">
+        <div class="aurora aurora-a"></div>
+        <div class="aurora aurora-b"></div>
+        <div class="grid-plane"></div>
+        <div class="noise-layer"></div>
+    </div>
+
+    <header class="site-header" id="header">
+        <a href="index.html" class="logo">
+            <span class="logo-mark"><i class="fas fa-cube"></i></span>
+            <span>Hansana <strong>Samaraweera</strong></span>
+        </a>
+
+        <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav">
             <i class="fas fa-bars"></i>
-        </div>
-        
-        <nav>
+        </button>
+
+        <nav id="primary-nav">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -29,35 +40,55 @@
         </nav>
     </header>
 
-    <!-- Projects Section -->
-    <main class="projects-container">
-        <section class="projects-hero">
-            <div class="container">
-                <h1><i class="fas fa-laptop-code"></i> My <span>Projects</span></h1>
-                <p>Explore my work in web development, Android development, and more</p>
+    <main class="site-shell page-shell">
+        <section class="page-hero panel" data-reveal>
+            <div>
+                <p class="eyebrow">Project Gallery</p>
+                <h1>Projects that reflect my path into AI engineering.</h1>
+                <p>These projects highlight machine learning, agentic workflows, analytics, and supporting software systems built to solve real-world problems.</p>
+            </div>
+            <div class="hero-badges">
+                <span>Machine Learning</span>
+                <span>Agentic AI</span>
+                <span>Analytics &amp; Vision</span>
             </div>
         </section>
 
-        <section class="projects-filter">
-            <div class="container">
-              <div class="filter-buttons">
-    <button class="active" data-filter="all">All</button>
-    <button data-filter="web-dev">Web Development</button>
-    <button data-filter="java">Java</button>
-    <button data-filter="ml-ai">ML / Data Science</button>
-</div>
-
+        <section class="projects-toolbar panel" data-reveal>
+            <div class="toolbar-copy">
+                <p class="eyebrow">Filter Projects</p>
+                <h2>Browse by engineering focus</h2>
+            </div>
+            <div class="filter-buttons" role="tablist" aria-label="Project categories">
+                <button class="active" data-filter="all" type="button">All</button>
+                <button data-filter="web-dev" type="button">Web Development</button>
+                <button data-filter="java" type="button">Java</button>
+                <button data-filter="ml-ai" type="button">ML / Data Science</button>
             </div>
         </section>
 
-        <section class="projects-grid">
-            <div class="container">
-                <div id="projects-list" class="grid">
-                    <!-- Projects will be loaded via JavaScript -->
-                </div>
-            </div>
+        <section class="projects-grid-section" data-reveal>
+            <div id="projects-list" class="projects-grid"></div>
         </section>
     </main>
+
+    <footer class="site-footer">
+        <div class="footer-brand">
+            <div class="footer-badge">
+                <i class="fas fa-microchip"></i>
+            </div>
+            <div>
+                <p>Hansana Samaraweera</p>
+                <span>Aspiring AI engineer building intelligent systems and data-driven products.</span>
+            </div>
+        </div>
+        <div class="footer-links">
+            <a href="https://github.com/Hansana477" target="_blank" rel="noreferrer"><i class="fab fa-github"></i><span>GitHub</span></a>
+            <a href="https://www.linkedin.com/in/hansana-samaraweera-4ba719311/" target="_blank" rel="noreferrer"><i class="fab fa-linkedin-in"></i><span>LinkedIn</span></a>
+            <a href="mailto:hansanasamaraweera13@gmail.com"><i class="fas fa-envelope"></i><span>Email</span></a>
+        </div>
+        <p class="footer-copy"><i class="far fa-copyright"></i> <span data-year></span> Hansana Samaraweera</p>
+    </footer>
 
     <script src="js/script.js"></script>
     <script src="js/projects.js"></script>

@@ -3,29 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hansana Samaraweera</title>
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Hansana Samaraweera | AI Engineer Portfolio</title>
+    <meta name="description" content="Portfolio of Hansana Samaraweera, an aspiring AI engineer building intelligent systems, machine learning projects, and data-driven products.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
-    <!-- Animated Background -->
-    <div class="bg-animation">
-        <div class="bg-circle circle-1"></div>
-        <div class="bg-circle circle-2"></div>
-        <div class="bg-circle circle-3"></div>
+<body data-page="home">
+    <div class="site-backdrop" aria-hidden="true">
+        <div class="aurora aurora-a"></div>
+        <div class="aurora aurora-b"></div>
+        <div class="grid-plane"></div>
+        <div class="noise-layer"></div>
     </div>
 
-    <!-- Header -->
-    <header id="header">
-        <a href="index.html" class="logo"><i class="fas fa-code"></i> Hansana<span>Samaraweera</span></a>
-        
-        
-        <div class="menu-toggle">
+    <header class="site-header" id="header">
+        <a href="index.html" class="logo">
+            <span class="logo-mark"><i class="fas fa-cube"></i></span>
+            <span>Hansana <strong>Samaraweera</strong></span>
+        </a>
+
+        <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav">
             <i class="fas fa-bars"></i>
-        </div>
-        
-        <nav>
+        </button>
+
+        <nav id="primary-nav">
             <ul>
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -36,37 +40,167 @@
         </nav>
     </header>
 
-    <!-- Social Links -->
-    <div class="social-links">
-        <a href="https://github.com/Hansana477"><i class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/hansana-samaraweera-4ba719311/"><i class="fab fa-linkedin-in"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-    </div>
+    <main class="site-shell">
+        <section class="hero panel" data-reveal>
+            <div class="hero-copy">
+                <p class="eyebrow">Portfolio Experience</p>
+                <h1 class="hero-title">
+                    Building
+                    <span>intelligent products</span>
+                    for the future of AI.
+                </h1>
+                <p class="hero-summary">
+                    I'm Hansana Samaraweera, a Data Science undergraduate at SLIIT focused on becoming an AI engineer by building machine learning systems, agentic workflows, and practical products powered by data.
+                </p>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Hi, I'm <span>Hansana Samaraweera</span> <br> 
-                <span class="typing-text">IT Student</span></h1>
-            <p>Hi! I’m Hansana Samaraweera, a Data Science undergraduate at SLIIT with a passion for web development and data science. This site showcases my projects and ideas, combining analytical thinking with creative design to build user-friendly and data-driven solutions.
+                <div class="hero-role-row">
+                    <span class="role-label">Currently:</span>
+                    <span class="typing-text" data-roles="Aspiring AI Engineer|Machine Learning Builder|Agentic AI Developer|Data Science Undergraduate">Aspiring AI Engineer</span>
+                </div>
 
-Join me as I explore how data and technology can solve real-world problems and make a meaningful impact. Let’s build something awesome together!
+                <div class="hero-actions">
+                    <a href="projects.html" class="btn btn-primary">Explore Projects</a>
+                    <a href="contact.html" class="btn btn-secondary">Let's Collaborate</a>
+                    <a href="resume.pdf" class="btn btn-ghost" download>Download Resume</a>
+                </div>
 
-</p>
-            <div class="hero-btns">
-                <a href="projects.html" class="btn btn-primary">View My Work</a>
-                <a href="contact.html" class="btn btn-outline">Contact Me</a>
+                <div class="hero-stats">
+                    <article class="stat-card glass-panel" data-tilt data-tilt-strength="10">
+                        <span class="stat-value">10+</span>
+                        <span class="stat-label">Projects built across AI, machine learning, analytics, and software engineering.</span>
+                    </article>
+                    <article class="stat-card glass-panel" data-tilt data-tilt-strength="10">
+                        <span class="stat-value">AI Focus</span>
+                        <span class="stat-label">Training toward intelligent systems, model-driven products, and production-ready workflows.</span>
+                    </article>
+                    <article class="stat-card glass-panel" data-tilt data-tilt-strength="10">
+                        <span class="stat-value">Open</span>
+                        <span class="stat-label">Looking for AI engineering internships, research opportunities, and ambitious collaborations.</span>
+                    </article>
+                </div>
+            </div>
+
+            <div class="hero-visual" data-reveal>
+                <div class="hero-scene-panel glass-panel" data-tilt data-tilt-strength="16">
+                    <canvas id="hero-canvas" aria-hidden="true"></canvas>
+                    <div class="scene-overlay">
+                        <p class="scene-kicker">Featured Experience</p>
+                        <h2>Focused on intelligent systems with real-world impact.</h2>
+                        <p>My goal is to build AI products that combine strong engineering, clear thinking, and useful user experiences.</p>
+                    </div>
+                    <span class="floating-chip chip-top">Machine Learning</span>
+                    <span class="floating-chip chip-right">Agentic Workflows</span>
+                    <span class="floating-chip chip-bottom">AI Products</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="insight-grid" data-reveal>
+            <article class="info-card panel" data-tilt>
+                <p class="eyebrow">What I Build</p>
+                <h2>AI-driven systems that solve practical problems.</h2>
+                <p>I’m most interested in AI assistants, predictive models, computer vision projects, data products, and the engineering needed to turn them into useful tools.</p>
+                <div class="pill-list">
+                    <span>Machine Learning</span>
+                    <span>Agentic AI</span>
+                    <span>Computer Vision</span>
+                    <span>Data Products</span>
+                </div>
+            </article>
+
+            <article class="info-card panel" data-tilt>
+                <p class="eyebrow">Career Direction</p>
+                <h2>Growing toward AI engineering with strong fundamentals.</h2>
+                <p>I’m building depth in machine learning, model integration, data pipelines, and system design so I can contribute to real AI products at an engineering level.</p>
+                <ul class="feature-list">
+                    <li>Hands-on AI and machine learning projects</li>
+                    <li>Practical experience with data and backend workflows</li>
+                    <li>Strong presentation for technical work</li>
+                </ul>
+            </article>
+        </section>
+
+        <section class="showcase panel" data-reveal>
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">Selected Work</p>
+                    <h2>Projects that show my path toward AI engineering.</h2>
+                </div>
+                <a href="projects.html" class="text-link">See all projects <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="showcase-grid">
+                <article class="project-highlight" data-tilt>
+                    <div class="project-highlight-copy">
+                        <span class="project-type">Agentic AI</span>
+                        <h3>T20 World Cup Match Predictor</h3>
+                        <p>Agentic prediction workflow with LangChain, LangGraph, Flask, and live sports intelligence for faster cricket insights.</p>
+                    </div>
+                    <img src="images/t20.jpg" alt="T20 World Cup 2026 Match Predictor preview">
+                </article>
+
+                <article class="project-highlight" data-tilt>
+                    <div class="project-highlight-copy">
+                        <span class="project-type">Computer Vision</span>
+                        <h3>Pet Identifier &amp; Care Assistant</h3>
+                        <p>Breed classification plus retrieval-augmented pet guidance using PyTorch, EfficientNet, Gradio, and vector search.</p>
+                    </div>
+                    <img src="images/pet.png" alt="Pet Identifier and Care Assistant preview">
+                </article>
+
+                <article class="project-highlight" data-tilt>
+                    <div class="project-highlight-copy">
+                        <span class="project-type">Analytics + ML</span>
+                        <h3>Customer Shopping Behavior Analysis</h3>
+                        <p>Analysis workflow using Python, SQL Server, and Power BI to uncover customer patterns and translate data into decision-ready insights.</p>
+                    </div>
+                    <img src="images/customer.png" alt="Customer shopping behavior analysis preview">
+                </article>
+            </div>
+        </section>
+
+        <section class="trajectory-grid" data-reveal>
+            <article class="trajectory-card panel" data-tilt>
+                <p class="eyebrow">Current Focus</p>
+                <h2>Where I'm growing right now</h2>
+                <ul class="feature-list">
+                    <li>Agentic AI systems with structured workflows</li>
+                    <li>Machine learning models and evaluation</li>
+                    <li>AI products that connect models to real users</li>
+                </ul>
+            </article>
+
+            <article class="trajectory-card panel" data-tilt>
+                <p class="eyebrow">Career Goal</p>
+                <h2>Becoming an AI engineer who can build end to end</h2>
+                <ul class="feature-list">
+                    <li>From data preparation to model-backed applications</li>
+                    <li>From experimentation to usable product experiences</li>
+                    <li>From technical ideas to deployable solutions</li>
+                </ul>
+            </article>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-brand">
+            <div class="footer-badge">
+                <i class="fas fa-microchip"></i>
+            </div>
+            <div>
+                <p>Hansana Samaraweera</p>
+                <span>Aspiring AI engineer building intelligent systems and data-driven products.</span>
             </div>
         </div>
-        
-        <div class="hero-image">
-            <img src="https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Developer Illustration">
+        <div class="footer-links">
+            <a href="https://github.com/Hansana477" target="_blank" rel="noreferrer"><i class="fab fa-github"></i><span>GitHub</span></a>
+            <a href="https://www.linkedin.com/in/hansana-samaraweera-4ba719311/" target="_blank" rel="noreferrer"><i class="fab fa-linkedin-in"></i><span>LinkedIn</span></a>
+            <a href="mailto:hansanasamaraweera13@gmail.com"><i class="fas fa-envelope"></i><span>Email</span></a>
         </div>
-        
-       
-    </section>
+        <p class="footer-copy"><i class="far fa-copyright"></i> <span data-year></span> Hansana Samaraweera</p>
+    </footer>
 
     <script src="js/script.js"></script>
+    <script type="module" src="js/hero-scene.js"></script>
 </body>
 </html>
